@@ -1,0 +1,8 @@
+{
+  "name": "ai-handoff",
+  "description": "Generate structured AI handoff documents from session context. Captures what was done, what failed, and what's next — formatted for the next AI agent to pick up seamlessly.",
+  "author": {
+    "name": "nazmoney",
+    "url": "https://github.com/nazmoney"
+  }
+}
