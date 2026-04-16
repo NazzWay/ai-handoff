@@ -58,10 +58,11 @@ When you run `/handoff`, the AI reviews its own conversation and generates a str
 ### <img src="https://cdn.simpleicons.org/anthropic/181818" width="16"> Claude Code (plugin)
 
 ```bash
-claude plugin add NazzWay/ai-handoff
+claude plugin marketplace add NazzWay/ai-handoff
+claude plugin install ai-handoff@NazzWay-ai-handoff
 ```
 
-Then use `/handoff` in any session.
+Then restart Claude Code and use `/handoff` in any session.
 
 ### <img src="https://cdn.simpleicons.org/openaigym/181818" width="16"> OpenCode
 
