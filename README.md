@@ -18,10 +18,8 @@ What was done. What failed. What's next. One command.
 <td align="center"><img src="https://cdn.simpleicons.org/cline/181818" width="28" alt="Cline"><br><b>Cline</b></td>
 </tr>
 <tr>
-<td align="center"><img src="https://cdn.simpleicons.org/sourcegraph/FF5543" width="28" alt="Amp"><br><b>Amp</b></td>
 <td align="center"><img src="assets/logos/amazon-q.png" width="28" alt="Amazon Q"><br><b>Amazon Q</b></td>
 <td align="center"><img src="assets/logos/mistral.png" width="28" alt="Mistral"><br><b>Vibe</b></td>
-<td align="center"><img src="https://cdn.simpleicons.org/aider/14B8A6" width="28" alt="Aider"><br><b>Aider</b></td>
 <td align="center"><img src="https://cdn.simpleicons.org/openaigym/181818" width="28" alt="OpenCode"><br><b>OpenCode</b></td>
 <td align="center">📝<br><b>Any AI CLI</b></td>
 </tr>
@@ -115,28 +113,6 @@ cp -r .clinerules/ /path/to/your/project/.clinerules/
 cp -r skills/ /path/to/your/project/skills/
 ```
 
-### <img src="https://cdn.simpleicons.org/sourcegraph/FF5543" width="16"> Amp
-
-```bash
-cp AGENT.md /path/to/your/project/
-cp -r skills/ /path/to/your/project/skills/
-```
-
-Amp auto-reads `AGENT.md`.
-
-### <img src="https://cdn.simpleicons.org/aider/14B8A6" width="16"> Aider
-
-```bash
-aider --read skills/handoff/SKILL.md
-```
-
-Or add to `.aider.conf.yml`:
-
-```yaml
-read:
-  - skills/handoff/SKILL.md
-```
-
 ### <img src="assets/logos/amazon-q.png" width="16"> Amazon Q
 
 ```
@@ -200,7 +176,6 @@ ai-handoff/
 ├── .cursor/rules/handoff.mdc        ← Cursor rule
 ├── .windsurf/rules/handoff.md       ← Windsurf rule
 ├── .clinerules/handoff.md           ← Cline rule
-├── AGENT.md                         ← Amp
 ├── AGENTS.md                        ← Codex
 ├── CLAUDE.md                        ← Claude Code / OpenCode
 ├── GEMINI.md                        ← Gemini CLI
