@@ -12,15 +12,15 @@ What was done. What failed. What's next. One command.
 <tr>
 <td align="center"><img src="https://cdn.simpleicons.org/anthropic/181818" width="28" alt="Claude"><br><b>Claude Code</b></td>
 <td align="center"><img src="https://cdn.simpleicons.org/openai/181818" width="28" alt="OpenAI"><br><b>Codex</b></td>
-<td align="center"><img src="https://cdn.simpleicons.org/google/4285F4" width="28" alt="Google"><br><b>Gemini CLI</b></td>
+<td align="center"><img src="assets/logos/gemini.png" width="28" alt="Gemini"><br><b>Gemini CLI</b></td>
 <td align="center"><img src="https://cdn.simpleicons.org/cursor/181818" width="28" alt="Cursor"><br><b>Cursor</b></td>
-<td align="center"><img src="https://cdn.simpleicons.org/codeium/09B6A2" width="28" alt="Windsurf"><br><b>Windsurf</b></td>
+<td align="center"><img src="assets/logos/windsurf.png" width="28" alt="Windsurf"><br><b>Windsurf</b></td>
 <td align="center"><img src="https://cdn.simpleicons.org/cline/181818" width="28" alt="Cline"><br><b>Cline</b></td>
 </tr>
 <tr>
 <td align="center"><img src="https://cdn.simpleicons.org/sourcegraph/FF5543" width="28" alt="Amp"><br><b>Amp</b></td>
-<td align="center"><img src="https://cdn.simpleicons.org/amazonaws/FF9900" width="28" alt="Amazon"><br><b>Amazon Q</b></td>
-<td align="center"><img src="https://cdn.simpleicons.org/mistral/FF7000" width="28" alt="Mistral"><br><b>Vibe</b></td>
+<td align="center"><img src="assets/logos/amazon-q.png" width="28" alt="Amazon Q"><br><b>Amazon Q</b></td>
+<td align="center"><img src="assets/logos/mistral.png" width="28" alt="Mistral"><br><b>Vibe</b></td>
 <td align="center"><img src="https://cdn.simpleicons.org/aider/14B8A6" width="28" alt="Aider"><br><b>Aider</b></td>
 <td align="center"><img src="https://cdn.simpleicons.org/openaigym/181818" width="28" alt="OpenCode"><br><b>OpenCode</b></td>
 <td align="center">📝<br><b>Any AI CLI</b></td>
@@ -74,7 +74,7 @@ Copy the repo into your project, then add to `~/.config/opencode/opencode.json`:
 }
 ```
 
-### <img src="https://cdn.simpleicons.org/google/4285F4" width="16"> Gemini CLI
+### <img src="assets/logos/gemini.png" width="16"> Gemini CLI
 
 ```bash
 cp GEMINI.md /path/to/your/project/
@@ -101,7 +101,7 @@ cp -r skills/ /path/to/your/project/skills/
 
 Activates when you mention "handoff".
 
-### <img src="https://cdn.simpleicons.org/codeium/09B6A2" width="16"> Windsurf
+### <img src="assets/logos/windsurf.png" width="16"> Windsurf
 
 ```bash
 cp -r .windsurf/ /path/to/your/project/.windsurf/
@@ -137,13 +137,13 @@ read:
   - skills/handoff/SKILL.md
 ```
 
-### <img src="https://cdn.simpleicons.org/amazonaws/FF9900" width="16"> Amazon Q
+### <img src="assets/logos/amazon-q.png" width="16"> Amazon Q
 
 ```
 /load skills/handoff/SKILL.md
 ```
 
-### <img src="https://cdn.simpleicons.org/mistral/FF7000" width="16"> Mistral Vibe
+### <img src="assets/logos/mistral.png" width="16"> Mistral Vibe
 
 ```bash
 cp skills/handoff/SKILL.md ~/.vibe/prompts/handoff.md
