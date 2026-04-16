@@ -1,26 +1,61 @@
-# AI-Handoff
+# 📄 AI-Handoff
 
-Structured handoff documents for AI coding agents. Type `/handoff` and your AI generates a complete session summary — what was done, what failed, what's next — formatted for the next agent to pick up seamlessly.
+> Type `/handoff` — your AI generates a complete session summary for the next agent to pick up seamlessly.
 
-Works with: **Claude Code** | **OpenCode** | **Gemini CLI** | **Codex** | **Cursor** | **Windsurf** | **Cline** | **Aider** | **Amp** | **Amazon Q** | **Mistral Vibe** | and any AI tool that reads markdown instructions.
+What was done. What failed. What's next. One command.
 
-## What it does
+---
 
-When you run `/handoff`, the AI reviews its own conversation context and generates a markdown doc with:
+## 🤖 Supported Tools
 
-- **Completed** — what got done, with file paths and status
-- **Incomplete / Failed** — blockers and exact errors
-- **Next Steps** — prioritized actions for the next session
-- **How It Works** — architecture context for continuity
-- **Do Not Touch** — guardrails to prevent regressions
-- **Attempted & Failed** — avoid repeating dead ends
-- **Key Files** — quick reference to relevant paths
+<table>
+<tr>
+<td align="center"><img src="https://cdn.simpleicons.org/anthropic/181818" width="28" alt="Claude"><br><b>Claude Code</b></td>
+<td align="center"><img src="https://cdn.simpleicons.org/openai/181818" width="28" alt="OpenAI"><br><b>Codex</b></td>
+<td align="center"><img src="https://cdn.simpleicons.org/google/4285F4" width="28" alt="Google"><br><b>Gemini CLI</b></td>
+<td align="center"><img src="https://cdn.simpleicons.org/cursor/181818" width="28" alt="Cursor"><br><b>Cursor</b></td>
+<td align="center"><img src="https://cdn.simpleicons.org/codeium/09B6A2" width="28" alt="Windsurf"><br><b>Windsurf</b></td>
+<td align="center"><img src="https://cdn.simpleicons.org/cline/181818" width="28" alt="Cline"><br><b>Cline</b></td>
+</tr>
+<tr>
+<td align="center"><img src="https://cdn.simpleicons.org/sourcegraph/FF5543" width="28" alt="Amp"><br><b>Amp</b></td>
+<td align="center"><img src="https://cdn.simpleicons.org/amazonaws/FF9900" width="28" alt="Amazon"><br><b>Amazon Q</b></td>
+<td align="center"><img src="https://cdn.simpleicons.org/mistral/FF7000" width="28" alt="Mistral"><br><b>Vibe</b></td>
+<td align="center"><img src="https://cdn.simpleicons.org/aider/14B8A6" width="28" alt="Aider"><br><b>Aider</b></td>
+<td align="center"><img src="https://cdn.simpleicons.org/openaigym/181818" width="28" alt="OpenCode"><br><b>OpenCode</b></td>
+<td align="center">📝<br><b>Any AI CLI</b></td>
+</tr>
+</table>
 
-Output: `handoff_docs/handoff_YYYY-MM-DD_[short-task-name].md`
+Works with any AI tool that reads markdown instructions.
 
-## Install
+---
 
-### Claude Code (plugin — recommended)
+## ✨ What it does
+
+When you run `/handoff`, the AI reviews its own conversation and generates a structured doc:
+
+| Section | What it captures |
+|---------|-----------------|
+| ✅ **Completed** | What got done, file paths, status |
+| ❌ **Incomplete** | Blockers and exact errors |
+| 🔄 **Current State** | What's working vs what's broken |
+| 🚫 **Failed Approaches** | Dead ends — so the next agent doesn't repeat them |
+| ⚖️ **Key Decisions** | Choices made and why |
+| ▶️ **Resume Instructions** | Step-by-step to continue |
+| 🏗️ **How It Works** | Architecture context |
+| ⚙️ **Setup Required** | Env vars, deps, test data |
+| 💻 **Code Context** | Key signatures and API shapes |
+| ⚠️ **Warnings** | What not to touch and why |
+| 📁 **Key Files** | Quick reference to relevant paths |
+
+**Output:** `handoff_docs/handoff_YYYY-MM-DD_[short-task-name].md`
+
+---
+
+## 📦 Install
+
+### <img src="https://cdn.simpleicons.org/anthropic/181818" width="16"> Claude Code (plugin)
 
 ```bash
 claude plugin add NazzWay/ai-handoff
@@ -28,9 +63,9 @@ claude plugin add NazzWay/ai-handoff
 
 Then use `/handoff` in any session.
 
-### OpenCode
+### <img src="https://cdn.simpleicons.org/openaigym/181818" width="16"> OpenCode
 
-Clone or copy the repo into your project, then add `CLAUDE.md` to your instructions array in `~/.config/opencode/opencode.json`:
+Copy the repo into your project, then add to `~/.config/opencode/opencode.json`:
 
 ```json
 {
@@ -38,56 +73,57 @@ Clone or copy the repo into your project, then add `CLAUDE.md` to your instructi
 }
 ```
 
-### Gemini CLI
-
-Copy `GEMINI.md` and the `skills/` directory into your project root. Gemini CLI auto-reads `GEMINI.md`.
+### <img src="https://cdn.simpleicons.org/google/4285F4" width="16"> Gemini CLI
 
 ```bash
 cp GEMINI.md /path/to/your/project/
 cp -r skills/ /path/to/your/project/skills/
 ```
 
-### OpenAI Codex
+Gemini CLI auto-reads `GEMINI.md`.
 
-Copy `AGENTS.md` and the `skills/` directory into your project root. Codex auto-reads `AGENTS.md`.
+### <img src="https://cdn.simpleicons.org/openai/181818" width="16"> Codex
 
 ```bash
 cp AGENTS.md /path/to/your/project/
 cp -r skills/ /path/to/your/project/skills/
 ```
 
-### Cursor
+Codex auto-reads `AGENTS.md`.
 
-Copy the `.cursor/` directory and `skills/` into your project root:
+### <img src="https://cdn.simpleicons.org/cursor/181818" width="16"> Cursor
 
 ```bash
 cp -r .cursor/ /path/to/your/project/.cursor/
 cp -r skills/ /path/to/your/project/skills/
 ```
 
-The `.cursor/rules/handoff.mdc` rule activates when you mention "handoff".
+Activates when you mention "handoff".
 
-### Windsurf
-
-Copy the `.windsurf/` directory and `skills/` into your project root:
+### <img src="https://cdn.simpleicons.org/codeium/09B6A2" width="16"> Windsurf
 
 ```bash
 cp -r .windsurf/ /path/to/your/project/.windsurf/
 cp -r skills/ /path/to/your/project/skills/
 ```
 
-### Cline
-
-Copy the `.clinerules/` directory and `skills/` into your project root:
+### <img src="https://cdn.simpleicons.org/cline/181818" width="16"> Cline
 
 ```bash
 cp -r .clinerules/ /path/to/your/project/.clinerules/
 cp -r skills/ /path/to/your/project/skills/
 ```
 
-### Aider
+### <img src="https://cdn.simpleicons.org/sourcegraph/FF5543" width="16"> Amp
 
-Load the skill file as read-only context:
+```bash
+cp AGENT.md /path/to/your/project/
+cp -r skills/ /path/to/your/project/skills/
+```
+
+Amp auto-reads `AGENT.md`.
+
+### <img src="https://cdn.simpleicons.org/aider/14B8A6" width="16"> Aider
 
 ```bash
 aider --read skills/handoff/SKILL.md
@@ -100,91 +136,88 @@ read:
   - skills/handoff/SKILL.md
 ```
 
-### Amp (Sourcegraph)
-
-Copy `AGENT.md` and the `skills/` directory into your project root. Amp auto-reads `AGENT.md`.
-
-```bash
-cp AGENT.md /path/to/your/project/
-cp -r skills/ /path/to/your/project/skills/
-```
-
-### Amazon Q CLI
-
-Load the skill manually per session:
+### <img src="https://cdn.simpleicons.org/amazonaws/FF9900" width="16"> Amazon Q
 
 ```
 /load skills/handoff/SKILL.md
 ```
 
-### Mistral Vibe
-
-Copy the skill to your Vibe prompts directory:
+### <img src="https://cdn.simpleicons.org/mistral/FF7000" width="16"> Mistral Vibe
 
 ```bash
 cp skills/handoff/SKILL.md ~/.vibe/prompts/handoff.md
 ```
 
-### Any other AI tool
+### 📝 Any other AI tool
 
-The skill is plain markdown. Copy `skills/handoff/SKILL.md` into whatever instructions/rules directory your tool reads. If it can read a markdown file, it can run handoff.
+Copy `skills/handoff/SKILL.md` into your tool's instructions directory. If it reads markdown, it runs handoff.
 
-## Usage
+---
+
+## 🚀 Usage
 
 ```
 /handoff
 ```
 
-Or natural language:
-- "make a handoff"
-- "write a handoff doc"
-- "generate handoff"
+Or just say:
+- *"make a handoff"*
+- *"write a handoff doc"*
+- *"generate handoff"*
 
-The AI analyzes the current conversation and writes a structured doc to `handoff_docs/`.
+---
 
-## Template
-
-The handoff doc follows a fixed structure optimized for AI-to-AI continuity:
+## 📐 Template
 
 ```
-# HANDOFF DOC: [Project/Feature]
-Date | Agent/Dev | Current Scope/Goal
+# HANDOFF: [Task Title]
+Date | Agent | Branch | Status
+Goal
 
 ## COMPLETED
-## INCOMPLETE / FAILED
-## NEXT STEPS & FUTURE PIPELINE
-## HOW IT WORKS (Critical Context)
-## DO NOT TOUCH
-## ATTEMPTED & FAILED (Avoid Repeating)
-## SUGGESTED FIXES / METHODS
-## KEY FILES & REFERENCES
+## INCOMPLETE
+## CURRENT STATE
+## FAILED APPROACHES (Don't Repeat)
+## KEY DECISIONS
+## RESUME INSTRUCTIONS
+## HOW IT WORKS
+## SETUP REQUIRED
+## CODE CONTEXT
+## WARNINGS
+## KEY FILES
 ```
 
-See [`skills/handoff/SKILL.md`](skills/handoff/SKILL.md) for the full template.
+See [`skills/handoff/SKILL.md`](skills/handoff/SKILL.md) for the full template with placeholders.
 
-## Repo structure
+---
+
+## 🗂️ Repo Structure
 
 ```
 ai-handoff/
-├── .claude-plugin/plugin.json    ← Claude Code plugin manifest
-├── .cursor/rules/handoff.mdc     ← Cursor rule (activates on "handoff")
-├── .windsurf/rules/handoff.md    ← Windsurf rule (manual trigger)
-├── .clinerules/handoff.md        ← Cline rule
-├── AGENT.md                      ← Amp (Sourcegraph) instructions
-├── AGENTS.md                     ← Codex instructions
-├── CLAUDE.md                     ← Claude Code / OpenCode instructions
-├── GEMINI.md                     ← Gemini CLI instructions
-├── LICENSE                       ← MIT
+├── .claude-plugin/plugin.json       ← Claude Code plugin
+├── .cursor/rules/handoff.mdc        ← Cursor rule
+├── .windsurf/rules/handoff.md       ← Windsurf rule
+├── .clinerules/handoff.md           ← Cline rule
+├── AGENT.md                         ← Amp
+├── AGENTS.md                        ← Codex
+├── CLAUDE.md                        ← Claude Code / OpenCode
+├── GEMINI.md                        ← Gemini CLI
+├── LICENSE                          ← MIT
 ├── README.md
 └── skills/
     └── handoff/
-        └── SKILL.md              ← Core skill (the actual template + logic)
+        └── SKILL.md                 ← Core skill (one file, every tool)
 ```
 
-## Why
+---
 
-AI coding sessions are stateless. When context resets — new session, different model, token limit hit — all the nuance of what was tried, what failed, and why is lost. Handoff docs solve this by giving the next agent a structured briefing.
+## 💡 Why
 
-## License
+AI sessions are stateless. Context resets — new session, different model, token limit — and everything learned is lost. Handoff docs give the next agent a structured briefing so work continues, not restarts.
+
+---
+
+## 📄 License
 
 MIT
