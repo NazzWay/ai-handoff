@@ -47,7 +47,7 @@ When you run `/handoff`, the AI reviews its own conversation and generates a str
 | ⚠️ **Warnings** | What not to touch and why |
 | 📁 **Key Files** | Quick reference to relevant paths |
 
-**Output:** `handoff_docs/handoff_YYYY-MM-DD_[short-task-name].md`
+**Output:** `Handoff_Docs/handoff_YYYY-MM-DD_[short-task-name].md`
 
 ---
 

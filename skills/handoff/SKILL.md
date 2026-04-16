@@ -19,7 +19,7 @@ Generate a structured handoff document from the current session's conversation c
    - Status: In Progress / Blocked / Complete
    - Short task name: 3-5 word slug using hyphens (e.g., `arena-model-extraction-fix`)
 3. **Populate the template below** with precise, actionable details from the session.
-4. **Write the file** to `handoff_docs/handoff_YYYY-MM-DD_[short_task_name].md` in the project root. Create `handoff_docs/` if it doesn't exist.
+4. **Write the file** to `Handoff_Docs/handoff_YYYY-MM-DD_[short_task_name].md` in the project root. Create `Handoff_Docs/` if it doesn't exist.
 5. **Confirm** to the user with the file path and a 1-line summary.
 
 ## Rules
@@ -107,5 +107,5 @@ Key signatures, API shapes, or snippets the next agent needs:
 ## Boundaries
 
 - Only generates handoff docs. Does not commit, push, or modify other files.
-- Output is a single markdown file in `handoff_docs/`.
+- Output is a single markdown file in `Handoff_Docs/`.
 - One-shot skill — not a persistent mode.
