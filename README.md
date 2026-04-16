@@ -1,4 +1,4 @@
-# ai-handoff
+# AI-Handoff
 
 Structured handoff documents for AI coding agents. Type `/handoff` and your AI generates a complete session summary — what was done, what failed, what's next — formatted for the next agent to pick up seamlessly.
 
