@@ -1,3 +1,8 @@
+---
+name: handoff
+description: Generate a structured handoff document from session context
+---
+
 Generate a structured handoff document from the current session's conversation context.
 
 ## Trigger
