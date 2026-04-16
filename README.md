@@ -11,7 +11,7 @@ What was done. What failed. What's next. One command.
 <table>
 <tr>
 <td align="center"><img src="https://cdn.simpleicons.org/anthropic/181818" width="28" alt="Claude"><br><b>Claude Code</b></td>
-<td align="center"><img src="https://cdn.simpleicons.org/openai/181818" width="28" alt="OpenAI"><br><b>Codex</b></td>
+<td align="center"><img src="assets/logos/codex.png" width="28" alt="OpenAI"><br><b>Codex</b></td>
 <td align="center"><img src="assets/logos/gemini.png" width="28" alt="Gemini"><br><b>Gemini CLI</b></td>
 <td align="center"><img src="https://cdn.simpleicons.org/cursor/181818" width="28" alt="Cursor"><br><b>Cursor</b></td>
 <td align="center"><img src="assets/logos/windsurf.png" width="28" alt="Windsurf"><br><b>Windsurf</b></td>
@@ -81,7 +81,7 @@ cp -r skills/ /path/to/your/project/skills/
 
 Gemini CLI auto-reads `GEMINI.md`.
 
-### <img src="https://cdn.simpleicons.org/openai/181818" width="16"> Codex
+### <img src="assets/logos/codex.png" width="16"> Codex
 
 ```bash
 cp AGENTS.md /path/to/your/project/
