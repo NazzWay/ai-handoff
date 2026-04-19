@@ -6,6 +6,12 @@ What was done. What failed. What's next. One command.
 
 ---
 
+## 💡 Why
+
+AI sessions are stateless. Context resets — new session, different model, token limit — and everything learned is lost. Handoff docs give the next agent a structured briefing so work continues, not restarts.
+
+---
+
 ## 🤖 Supported Tools
 
 <table>
@@ -186,11 +192,6 @@ ai-handoff/
         └── SKILL.md                 ← Core skill (one file, every tool)
 ```
 
----
-
-## 💡 Why
-
-AI sessions are stateless. Context resets — new session, different model, token limit — and everything learned is lost. Handoff docs give the next agent a structured briefing so work continues, not restarts.
 
 ---
 
